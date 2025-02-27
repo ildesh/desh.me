@@ -1,0 +1,47 @@
+.first-content{
+    background-color: var(--first-content--background-color);
+    padding: 30px 40px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 800px;
+}
+
+.first-content .text-content h1{
+    font-size: 40px;
+    font-family: 'Outfit', Italic;
+    font-weight: 600;
+}
+
+
+.first-content p{
+     font-size: 25px;
+     font-family: 'Outfit', Italic;
+     font-weight: 400;
+     max-width: 1200px;
+}
+
+.first-content img{
+    width: 500px;
+    height: auto;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.second-content{
+    background-color: var(--second-content--background-color);
+    padding: 30px 40px;
+    gap: 20px;
+    display: flex;
+    min-height: 600px;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alfa+Slab+One&family=Archivo+Black&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Tilt+Warp&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+html,body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--body--background-color);
+}
+header{
+    background-color: var(--header--background-color);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+header .logo span{
+    font-size: 35px;
+    font-family: 'Parkinsans', latin;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Stile di base per la navbar */
+.navbar {
+    background-color: var(--header--background-color);    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+/* Contenitore della navbar con posizionamento relativo */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.nav-links li {
+    list-style: none;
+    font-size: 20px;
+    font-family: 'Parkinsans', latin;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+/* Stile dei link della navbar */
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: color 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+/* Elemento di sfondo che scorrerà */
+.nav-links::after {
+    content: '';
+    position: absolute;
+    height: 40px; /* Altezza del background, regola in base alle tue esigenze */
+    background-color: #fff;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none; /* Assicura che non interferisca con gli eventi mouse */
+}
+
+/* Cambio colore del testo quando attivo o hover */
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #000;
+}
+
+/* Nasconde lo sfondo predefinito sui link .active per non interferire con l'effetto */
+.nav-links li a.active {
+    background-color: transparent;
+}
+
+/* Personal ScrollBar */
+
+/* Basic scrollbar styling */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track styling */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+  /* Handle styling */
+  ::-webkit-scrollbar-thumb {
+    background:  var(--scrollbar--background-color);
+  }
+  
+  /* Handle on hover with animation */
+  ::-webkit-scrollbar-thumb:hover {
+    background:  var(--scrollbar-hover-background-color);
+    transition: background 0.3s ease;
+  }
+  
+  /* Button styling (up and down arrows) */
+  ::-webkit-scrollbar-button:single-button {
+    background-color: var(--scrollbar--background-color);
+    display: block;
+    height: 16px;
+  }
+  
+  /* Up arrow */
+  ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 16 16'><path fill='white' d='M8 4 L12 10 L4 10 Z'/></svg>");
+    background-position: center;
+  }
+  
+  /* Down arrow */
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 16 16'><path fill='white' d='M8 12 L12 6 L4 6 Z'/></svg>");
+    background-position: center;
+  }
+  
+  /* Animation for buttons on hover */
+  ::-webkit-scrollbar-button:hover {
+    background-color: var(--scrollbar-hover-background-color);
+    transition: background-color 0.3s ease;
+  }
