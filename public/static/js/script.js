@@ -1,3 +1,18 @@
+import Scrollbar from 'smooth-scrollbar';
+
+var options = {
+    damping: 0.01,  // Valore più basso = scroll più fluido
+    thumbMinSize: 20,  // Dimensione minima della barra di scorrimento
+    renderByPixels: true,  // Se false, rende lo scrolling più fluido
+    alwaysShowTracks: true,  // Mostra sempre le barre di scorrimento
+    continuousScrolling: true,  // Permette lo scroll continuo anche quando si arriva alla fine
+};
+
+Scrollbar.use(OverscrollPlugin);
+
+
+Scrollbar.init(document.body, options);
+
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links li a');
@@ -64,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Se è un link interno, aggiorna immediatamente lo stato senza attendere la navigazione
             if (href.startsWith('/') || href.startsWith('./') || href === '#') {
+                e.preventDefault();
+
                 navItems.forEach(navItem => {
                     navItem.classList.remove('active');
                     navItem.style.color = '#fff';
@@ -73,6 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.style.color = '#000';
                 activeItem = this;
                 updateBackgroundPosition(this);
+
+                // Aggiunta di un timeout prima di cambiare la pagina
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500);
             }
         });
         
