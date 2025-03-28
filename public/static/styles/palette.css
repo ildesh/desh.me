@@ -1,11 +1,11 @@
 :root{
-    --scrollbar--background-color:#752d38;
-    --first-content--background-color:#f6e4c4;
+    --background--background-color:#f6e4c4;
+    --text--color: #f6e4c4;
+    --header--background-color:rgb(210, 194, 166);
     --border-color:#D3D3D3;
-    --footer--background-color:#2C3E50;
-    --bottons--background-color: #4682B4;
-    --header--background-color:#752d38;
-    --second-content--background-color:#9E6A5E;
-    --third-content--background-color: #BFA48B;
-    --scrollbar-hover-background-color:#551720;
+    --secondary--background-color:#cbb8ae;
+    --primary--background-color:#752d38;
+    --bottons--background-color: #752d38;
+    --scrollbar--background-color:#8a8986;
+    --scrollbar-hover-background-color:#605f5d;
 }

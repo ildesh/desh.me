@@ -7,6 +7,7 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  background-color: var(--background--background-color);
 }
 
 header{
@@ -14,7 +15,8 @@ header{
     padding: 15px 40px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: end;
+    border-bottom: #000 solid 2px;
 }
 
 
@@ -27,7 +29,6 @@ header .logo span{
 
 /* Stile di base per la navbar */
 .navbar {
-    background-color: var(--header--background-color);    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -53,7 +54,7 @@ header .logo span{
 
 /* Stile dei link della navbar */
 .nav-links li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 20px;
@@ -91,51 +92,3 @@ footer{
    margin-top: 0;
    height: 300px;
 }
-
-/* Personal ScrollBar */
-
-/* Basic scrollbar styling */
-::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  /* Track styling */
-  ::-webkit-scrollbar-track {
-    background: var(--first-content--background-color);
-}
-  
-  /* Handle styling */
-  ::-webkit-scrollbar-thumb {
-    background:  var(--scrollbar--background-color);
-  }
-  
-  /* Handle on hover with animation */
-  ::-webkit-scrollbar-thumb:hover {
-    background:  var(--scrollbar-hover-background-color);
-    transition: background 0.3s ease;
-  }
-  
-  /* Button styling (up and down arrows) */
-  ::-webkit-scrollbar-button:single-button {
-    background-color: var(--scrollbar--background-color);
-    display: block;
-    height: 16px;
-  }
-  
-  /* Up arrow */
-  ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 16 16'><path fill='white' d='M8 4 L12 10 L4 10 Z'/></svg>");
-    background-position: center;
-  }
-  
-  /* Down arrow */
-  ::-webkit-scrollbar-button:single-button:vertical:increment {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 16 16'><path fill='white' d='M8 12 L12 6 L4 6 Z'/></svg>");
-    background-position: center;
-  }
-  
-  /* Animation for buttons on hover */
-  ::-webkit-scrollbar-button:hover {
-    background-color: var(--scrollbar-hover-background-color);
-    transition: background-color 0.3s ease;
-  }
